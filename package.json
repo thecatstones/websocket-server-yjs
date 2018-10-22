@@ -2,10 +2,16 @@
   "name": "websocket-server-yjs",
   "version": "1.0.0",
   "description": "WebSocket Server with Yjs",
+  "engines": {
+    "node": "10.12.0"
+  },
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
   "author": "thecatstones",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "y-websockets-server": "^9.2.1"
+  }
 }
