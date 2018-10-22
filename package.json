@@ -1,0 +1,11 @@
+{
+  "name": "websocket-server-yjs",
+  "version": "1.0.0",
+  "description": "WebSocket Server with Yjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "thecatstones",
+  "license": "ISC"
+}
