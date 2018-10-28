@@ -31,12 +31,27 @@ var options = minimist(process.argv.slice(2), {
 })
 
 var port = Number.parseInt(options.port, 10)
-var io   = require('socket.io')(port)
-
-// Fix CORS issues:
+// var io   = require('socket.io')(port)
+// CORS
+const express = require('express')
+const app = express()
+const cors = require('cors')
+const corsOptions = {
+  origin: '*',
+  credentials: true,  // Set to true to pass the Access-Control-Allow-Credentials CORS header
+  allowedHeaders: [
+    'Origin',
+    'X-Requested-With',
+    'Content-Type', 
+    'Accept-Type',
+    '*',
+  ],
+}
+app.use(cors(corsOptions))
+const server = app.listen(port)
+var io = require('socket.io').listen(server)
 // io.set('origins', '*:*')
 io.origins(['*', '*:*'])
-debugger
 
 console.log('Running y-websockets-server on port ' + port)
 
