@@ -2,7 +2,7 @@
   "name": "websocket-server-yjs",
   "version": "1.0.0",
   "description": "WebSocket Server with Yjs",
-   "engines": {
+  "engines": {
     "node": "11.0.0"
   },
   "main": "server.js",
@@ -13,6 +13,7 @@
   "author": "thecatstones",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.4",
     "y-websockets-server": "^9.2.1"
   }
 }
