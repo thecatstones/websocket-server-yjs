@@ -32,6 +32,11 @@ var options = minimist(process.argv.slice(2), {
 
 var port = Number.parseInt(options.port, 10)
 var io   = require('socket.io')(port)
+
+// Fix CORS issues:
+// io.set('origins', '*:*')
+io.origins('*:*')
+
 console.log('Running y-websockets-server on port ' + port)
 
 global.yInstances = {}
