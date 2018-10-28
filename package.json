@@ -2,6 +2,9 @@
   "name": "websocket-server-yjs",
   "version": "1.0.0",
   "description": "WebSocket Server with Yjs",
+   "engines": {
+    "node": "11.0.0"
+  },
   "main": "server.js",
   "private": true,
   "scripts": {
