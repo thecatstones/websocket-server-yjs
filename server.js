@@ -6,7 +6,7 @@ var Y = require('yjs')
 
 Y.debug.log = console.log.bind(console)
 
-const log = Y.debug('y-websockets-server')
+const log    = Y.debug('y-websockets-server')
 var minimist = require('minimist')
 require('y-memory')(Y)
 try {
