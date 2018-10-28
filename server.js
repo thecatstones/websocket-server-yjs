@@ -34,8 +34,9 @@ var port = Number.parseInt(options.port, 10)
 var io   = require('socket.io')(port)
 
 // Fix CORS issues:
-io.set('origins', '*:*')
-io.origins('*:*')
+// io.set('origins', '*:*')
+io.origins(['*', '*:*'])
+debugger
 
 console.log('Running y-websockets-server on port ' + port)
 
